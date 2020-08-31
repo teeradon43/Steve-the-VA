@@ -74,9 +74,6 @@ def wakeWord(text):
 def getDate():
 
     now = datetime.datetime.now()
-    my_date = datetime.datetime.today()
-
-    weekday = calendar.day_name[my_date.weekday()]
     monthNum = now.month
     dayNum = now.day
 
