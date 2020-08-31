@@ -26,7 +26,7 @@ def recordAudio():
 
     #Open the microphone and start recording
     with sr.Microphone() as source:
-        print(get_device_count())
+        #print(sr.get_device_count())
         print('พูดอะไรก็ได้...')
         audio = r.listen(source)
 
