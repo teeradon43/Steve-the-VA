@@ -1,40 +1,27 @@
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// You can read about packages here: https://flutter.io/using-packages/
 import 'package:flutter/material.dart';
 
-var str = "";
-class BgColor extends StatelessWidget {
+import 'category_route.dart';
+
+/// The function that is called when main.dart is run.
+void main() {
+  runApp(UnitConverterApp());
+}
+
+/// This widget is the root of our application.
+///
+/// The first screen we see is a list [Categories].
+class UnitConverterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-            color: Colors.pink[100],
-            width: 300,
-            height: 200,
-            child: Center(
-                child: Text(str, style: TextStyle(fontSize: 40.0)))));
-  }
-}
-Widget largeButton(){
-  return Center(
-    child: RaisedButton(
-      onPressed: (){
-        str = 'Yo Dude WTF';
-        print('Click');
-      }
-    ),
-  );
-}
-void main() {
-  print('Running');
-  runApp(MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hello, Steve'),
-        ),
-        body: Column(
-          children: <Widget>[
-            BgColor(),
-            largeButton()
-          ])
-      )));
+      title: 'Unit Converter',
+      home: CategoryRoute(),
+    );
+  }
 }
