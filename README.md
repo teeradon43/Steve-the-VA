@@ -1,3 +1,3 @@
 # Steve-the-VA
 
-# PAUSE
+# '#' PAUSE '#'
